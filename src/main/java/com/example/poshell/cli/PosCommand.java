@@ -38,4 +38,12 @@ public class PosCommand {
         }
         return "ERROR";
     }
+
+    @ShellMethod(value = "Modify the Amount of a Product", key = "m")
+    public String modifyCart(String productId, int amount) {
+        if (posService.modify(productId, amount)) {
+            return posService.getCart().toString();
+        }
+        return "ERROR";
+    }
 }
