@@ -34,4 +34,10 @@ Please make the POS system robust and fully functional by implementing more comm
 
 Implementing a PosDB with real database is very much welcome. 
 
+---
+
 Please elaborate your understanding in layered systems via this homework in your README.md.
+
+`poshell`中分了三个文件夹，biz、cli、db分别对应Business Logic Layer、Presentation Layer、Data Access Layer。
+
+biz的主要构件是PosService，它正是负责沟通用户界面与数据库的桥梁。cli的主要构件是PosCommand，它是一个与用户交互的命令行界面。而db中的PosDB正是实际存储数据之处。
